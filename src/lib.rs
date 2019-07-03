@@ -1,4 +1,4 @@
-use wasm_bindgen::preclude::*; // import的な
+use wasm_bindgen::prelude::*; // import的な
 
 #[wasm_bindgen(start)] // これが最初に実行される命令？
 pub fn run() {
@@ -25,7 +25,7 @@ fn bare_bones() {
   log_many("Logging", "many values!");
 }
 
-marcro_rules! console_log {
+macro_rules! console_log {
   ($($t:tt)*) => (log(&format_args!($($t)*).to_string()))
 }
 
